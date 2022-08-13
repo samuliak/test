@@ -1,6 +1,8 @@
 package com.samuliak.test.utils;
 
 
+import lombok.extern.log4j.Log4j2;
+
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
@@ -12,14 +14,15 @@ import java.security.spec.KeySpec;
 import java.util.Base64;
 
 
+@Log4j2
 public class AesCryptUtils {
-
-    private final IvParameterSpec ivspec = new IvParameterSpec(new byte[]{0, 0, 5, 0, 9, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0});
 
     private Cipher eCipher;
     private Cipher dCipher;
 
     public AesCryptUtils(String secretKey, String salt) throws Exception {
+        IvParameterSpec ivspec = new IvParameterSpec(new byte[]{0, 0, 5, 0, 9, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0});
+
         eCipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         eCipher.init(Cipher.ENCRYPT_MODE, initSecretKey(secretKey, salt), ivspec);
 
@@ -32,17 +35,16 @@ public class AesCryptUtils {
             return Base64.getEncoder()
                     .encodeToString(eCipher.doFinal(strToEncrypt.getBytes(StandardCharsets.UTF_8)));
         } catch (Exception e) {
-            System.out.println("Error while encrypting: " + e);
+            log.error("Error while encrypting: {}", e.toString());
         }
         return null;
     }
 
     public String decrypt(String strToDecrypt) {
         try {
-
             return new String(dCipher.doFinal(Base64.getDecoder().decode(strToDecrypt)));
         } catch (Exception e) {
-            System.out.println("Error while decrypting: " + e);
+            log.error("Error while decrypting: {}", e.toString());
         }
         return null;
     }
