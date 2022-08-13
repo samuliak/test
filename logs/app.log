@@ -1,0 +1,16 @@
+[DEBUG] 2022-08-13 19:25:48.268 UserServiceImpl.java:29: Request params: ID - 45, fio - null
+[DEBUG] 2022-08-13 19:25:48.268 UserServiceImpl.java:30: Request encryption params - QasWxYAWLIh9VEulaNuSGmPkaicbviW7xRcxZRLv4tQ=
+[DEBUG] 2022-08-13 19:25:48.269 UserServiceImpl.java:31: Request decryption params - {"id":45, "fio":"null"}
+[DEBUG] 2022-08-13 19:25:52.487 UserServiceImpl.java:29: Request params: ID - 4, fio - null
+[DEBUG] 2022-08-13 19:25:52.488 UserServiceImpl.java:30: Request encryption params - 6XGLTFQ4DNvDUyFQMeOH10VmSaIhY+1eqw7exDsozZg=
+[DEBUG] 2022-08-13 19:25:52.488 UserServiceImpl.java:31: Request decryption params - {"id":4, "fio":"null"}
+[DEBUG] 2022-08-13 19:25:52.502 UserServiceImpl.java:41: Response encryption user - 6XGLTFQ4DNvDUyFQMeOH106QtJPr3RWIx7L9xDxbC2367eCWEvGgpLztOrkoUwFX
+[DEBUG] 2022-08-13 19:25:52.503 UserServiceImpl.java:42: Response decryption user - {"id":4, "fio":"Fedya Fedyovich"}
+[DEBUG] 2022-08-13 19:28:55.822 UserServiceImpl.java:29: Request params: ID - 4, fio - null
+[DEBUG] 2022-08-13 19:28:55.822 UserServiceImpl.java:30: Request encryption params - 6XGLTFQ4DNvDUyFQMeOH10VmSaIhY+1eqw7exDsozZg=
+[DEBUG] 2022-08-13 19:28:55.823 UserServiceImpl.java:31: Request decryption params - {"id":4, "fio":"null"}
+[DEBUG] 2022-08-13 19:28:55.931 UserServiceImpl.java:41: Response encryption user - 6XGLTFQ4DNvDUyFQMeOH106QtJPr3RWIx7L9xDxbC2367eCWEvGgpLztOrkoUwFX
+[DEBUG] 2022-08-13 19:28:55.931 UserServiceImpl.java:42: Response decryption user - {"id":4, "fio":"Fedya Fedyovich"}
+[DEBUG] 2022-08-13 19:28:58.802 UserServiceImpl.java:29: Request params: ID - 45, fio - null
+[DEBUG] 2022-08-13 19:28:58.803 UserServiceImpl.java:30: Request encryption params - QasWxYAWLIh9VEulaNuSGmPkaicbviW7xRcxZRLv4tQ=
+[DEBUG] 2022-08-13 19:28:58.803 UserServiceImpl.java:31: Request decryption params - {"id":45, "fio":"null"}
